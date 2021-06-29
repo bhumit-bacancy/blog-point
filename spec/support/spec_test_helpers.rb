@@ -1,0 +1,26 @@
+module SpecTestHelpers   
+  
+  def set_user(user_id)
+    user=User.find(user_id)
+  end
+
+  def login(user)
+    post "/login", params: { session: { username: user[:username], password: "password" } }
+  end
+
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+  def logged_in?
+      !!current_user
+  end
+
+  def require_user
+      if !logged_in?
+          flash[:alert] = "you must  be logged in first"
+          redirect_to login_path
+      end
+  end
+end
+

@@ -1,0 +1,188 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgray;
+}
+
+#logo{
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+#home-container{
+    margin-top: 25px;
+}
+.center {
+    text-align: center;
+}
+  
+.jumbotron {
+    background-image: asset-url('aaa.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 425px;
+}
+  
+.jumbotron h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+  
+.btn-xlarge {
+    font-size: 1.7em;
+    background-color: black;
+}
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgray;
+}
+
+  
+.abc{
+    text-decoration: none;
+    color: red;
+}
+
+/* paginayion styling */
+.apple_pagination {
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+    text-align: center; 
+    margin-left: 21.5%;
+    width: 57%;
+    padding: 1em;
+    cursor: default; }
+    .apple_pagination a, .apple_pagination span {
+      padding: 0.2em 0.3em; }
+    .apple_pagination .disabled {
+      color: #aaaaaa; }
+    .apple_pagination .current {
+      font-style: normal;
+      font-weight: bold;
+      background-color: #bebebe;
+      display: inline-block;
+      width: 1.4em;
+      height: 1.4em;
+      line-height: 1.5;
+      -moz-border-radius: 1em;
+      -webkit-border-radius: 1em;
+      border-radius: 1em;
+      text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+    .apple_pagination a {
+      text-decoration: none;
+      color: black; }
+      .apple_pagination a:hover, .apple_pagination a:focus {
+        text-decoration: underline; }
+     
+/* comments */
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.mb-100 {
+    margin-bottom: 100px
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0px solid transparent;
+    border-radius: 0px
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.card .card-title {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+
+.comment-widgets {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.comment-widgets .comment-row {
+    border-bottom: 1px solid transparent;
+    padding: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0
+}
+
+.p-2 {
+    padding: 0.5rem !important
+}
+
+.comment-text {
+    padding-left: 15px
+}
+
+.w-100 {
+    width: 100% !important
+}
+
+.m-b-15 {
+    margin-bottom: 15px
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.76563rem;
+    line-height: 1.5;
+    border-radius: 1px
+}
+
+.btn-cyan {
+    color: #fff;
+    background-color: #27a9e3;
+    border-color: #27a9e3
+}
+
+.btn-cyan:hover {
+    color: #fff;
+    background-color: #1a93ca;
+    border-color: #198bbe
+}
+
+.comment-widgets .comment-row:hover {
+    background: rgba(0, 0, 0, 0.05)
+}

@@ -1,0 +1,13 @@
+<div id="page-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1 class="text-center mt-4">Edit comments</h1>
+                <%= render 'form' %>  
+                <div class="form-group row justify-content-center">
+                    <%= link_to "Back", article_path(@comment.article), class:"btn btn-danger btn-lg" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

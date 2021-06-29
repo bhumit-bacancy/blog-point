@@ -1,0 +1,27 @@
+<div class="container">
+    <% @events.each do |a| %>
+        <div class="row justify-content-md-center">
+            <div class="col-8 mt-4">
+                <div class="card text-center mb-5 bg-white rounded">
+                    <div class="card-header font-italic">
+                         <%= link_to a.title, event_path(a) %>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><%= truncate(a.description,length:100) %></p>
+                        <%= link_to "View",event_path(a),class:"btn btn-outline-success" %>
+                        
+                    </div>
+                    <div class="card-body">
+                        <% if logged_in? %>
+                            <%= link_to "Register",event_reg_path(a), class:"btn btn-info"  %>
+                        <% end %>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <small>Created <%= time_ago_in_words(a.created_at) %> ago,
+                        Edited <%= time_ago_in_words(a.updated_at) %> ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

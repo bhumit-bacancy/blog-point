@@ -1,0 +1,12 @@
+<div id="page-content">
+
+    <h1 class="text-center mt-4">Events</h1>
+    <div class="apple_pagination">
+        <%= will_paginate @events, :container => false %>
+    </div>
+    <%= render 'event' %>
+
+    <div class="apple_pagination">
+        <%= will_paginate @events, :container => false %>
+    </div>
+</div>

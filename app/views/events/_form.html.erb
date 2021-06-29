@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <% if @event.errors.any? %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <h4 class="alert-heading">The following errors :
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span area-hidden="true">&times;</span>
+                                        </button></h4>
+                    <ul>
+                    <% @event.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <%end%>
+                    </ul>
+                </div>
+            <% end %>
+    
+            <%= form_with(model: @event,class: "shadow p-3 mb-3 bg-info rounded",local: true) do |f| %>
+                
+                <div class="form-group row">
+                    <%= f.label :name,class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.text_field :title, class: "form-control shadow rounded",placeholder:"Title of event" %>      
+                    </div>      
+                </div>
+                        
+                <div class="form-group row ">
+                    <%= f.label :description,class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.text_area :description,rows: 10,class: "form-control shadow rounded",placeholder:"Description" %>      
+                    </div>      
+                </div>
+
+                <div class="form-group row ">
+                    <%= f.label :date,class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                    <%= f.date_field :date,rows: 10,class: "form-control shadow rounded",placeholder:"Date" %>      
+                    </div>      
+                </div>
+
+                <div class="form-group row">
+                    <%= f.label :time, class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.time_field :time, class: "form-control shadow rounded",placeholder:"Time" %>      
+                    </div>      
+                </div>
+
+                <div class="form-group row">
+                    <%= f.label :venue, class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.text_field :venue, class: "form-control shadow rounded",placeholder:"venue of event" %>      
+                    </div>      
+                </div>
+
+                <div class="form-group row">
+                    <%= f.label :city,class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.text_field :city, class: "form-control shadow rounded",placeholder:"City" %>      
+                    </div>      
+                </div>
+
+                <div class="form-group row">
+                    <%= f.label :price,class: "col-2 col-form-label" %>
+                    <div class="col-10">
+                        <%= f.number_field :price, class: "form-control shadow rounded",placeholder:"Price" %>      
+                    </div>      
+                </div>
+                <div class="form-group row justify-content-center">
+                    <%=  f.submit class:"btn btn-outline-light btn-lg" %>
+                </div>
+
+            <% end %>
+        </div>
+
+        <%= link_to '[ cancel and back to article list ]',articles_path%>
+    </div>
+</div>

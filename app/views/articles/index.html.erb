@@ -1,0 +1,12 @@
+<div id="page-content">
+
+    <h1 class="text-center mt-4">Articles listing page</h1>
+    <div class="apple_pagination">
+        <%= will_paginate @arts, :container => false %>
+    </div>
+    <%= render 'article' %>
+
+    <div class="apple_pagination">
+        <%= will_paginate @arts, :container => false %>
+    </div>
+</div>
