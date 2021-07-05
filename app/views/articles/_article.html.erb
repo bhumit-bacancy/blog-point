@@ -19,14 +19,9 @@
                         <% end %>
                     </div>
                     <div class="card-body">
-                        <% if logged_in? %>
-                            <%= link_to "add comments",new_comment_path(article_id: a.id), class:"btn btn-info"  %>
-                        <% end %>
+                        
                     </div>
-                    <div class="card-footer text-muted">
-                        <small>Created <%= time_ago_in_words(a.created_at) %> ago,
-                        Edited <%= time_ago_in_words(a.updated_at) %> ago</small>
-                    </div>
+                   
                 </div>
             </div>
         </div>
